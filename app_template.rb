@@ -52,16 +52,28 @@ File.open('.gitignore', 'a') do |file|
   file.write ignoreparams
 end
 
+
 # ------------------------------ #
 # Set up RSpec
 # ------------------------------ #
+
 generate 'rspec:install'
 
 
 # ------------------------------ #
 # Execute command
 # ------------------------------ #
+
 run "mv README.rdoc README.md"
+
+
+# ------------------------------ #
+# Routing code
+# ------------------------------ #
+
+if yes?('Set rooting welcome#index ? (yes / no)')
+  route "root to : 'welcome#index'"
+end
 
 
 
