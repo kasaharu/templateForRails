@@ -55,8 +55,14 @@ end
 # ------------------------------ #
 # Set up RSpec
 # ------------------------------ #
-
 generate 'rspec:install'
+
+
+# ------------------------------ #
+# Execute command
+# ------------------------------ #
+run "mv README.rdoc README.md"
+
 
 
 
